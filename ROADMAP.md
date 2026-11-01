@@ -1,0 +1,42 @@
+# TrendTide — Product & Engineering Roadmap
+
+## Milestone Status Overview
+
+- [x] **Milestone 0: Planning & Architectural Scaffolding**
+  - Define user personas, domain boundaries, and mathematical formulations.
+  - Establish documentation suite (`PROJECT_PLAN.md`, `PROJECT_STRUCTURE.md`, `ROADMAP.md`, `SECURITY.md`, `PDR.md`, `TDR.md`).
+- [/] **Milestone 1: Frontend SaaS Interface (Current Phase)**
+  - [x] Configure Vite + TypeScript + Tailwind CSS client with port 3001.
+  - [x] Implement persistent demo/simulated mode banner.
+  - [x] Implement Auth suite (Login, Register, Forgot Password, Reset Password).
+  - [x] Build Dashboard overview with KPI cards and distribution charts.
+  - [x] Build Trend Explorer with search, category filtering, and velocity sorting.
+  - [x] Build Topic Detail page with SVG time-series charts, momentum meters, and volume stats.
+  - [x] Build Forecast Explorer displaying 80% & 95% uncertainty intervals and model comparison.
+  - [x] Build Recommendation Panel with transparent factor weighting.
+  - [x] Build Watchlist & Analysis History tracking.
+  - [x] Build User Profile & Alert Threshold Settings.
+  - [x] Build Error, Unauthorized (403), and 404 views.
+  - [x] Verify production build (`npm run build`).
+- [ ] **Milestone 2: Backend REST Core** (Pending User Approval)
+  - Scaffold Flask app factory, logging, config, and error handlers.
+- [ ] **Milestone 3: Data Ingestion Adapters** (Pending User Approval)
+  - Connect to permitted open data APIs (Wikimedia, GitHub Events, arXiv).
+- [ ] **Milestone 4: Data Pipeline & Normalization** (Pending User Approval)
+  - Implement time-bucketing, missing interval imputation, and schema enforcement.
+- [ ] **Milestone 5: Trend & Velocity Algorithms** (Pending User Approval)
+  - Implement EMA smoothing, 1st/2nd order derivatives, and burstiness index.
+- [ ] **Milestone 6: Time-Series Forecasting & Evaluation** (Pending User Approval)
+  - Chronological rolling-origin evaluation against naive baselines; sMAPE calculation.
+- [ ] **Milestone 7: Recommendation Ranking Engine** (Pending User Approval)
+  - Weighted multi-factor ranking and cold-start fallback.
+- [ ] **Milestone 8: Database Persistence & Auth** (Pending User Approval)
+  - PostgreSQL schema, SQLAlchemy models, Alembic migrations, JWT/Session auth.
+- [ ] **Milestone 9: System Integration** (Pending User Approval)
+  - Connect client to Flask backend with end-to-end caching.
+- [ ] **Milestone 10: Testing & Verification** (Pending User Approval)
+  - Pytest coverage > 85%, Vitest component testing, and validation checks.
+- [ ] **Milestone 11: Containerization & Deployment** (Pending User Approval)
+  - Docker Compose configuration, production Nginx, and health checks.
+- [ ] **Milestone 12: Course Handover & Teaching Materials** (Pending User Approval)
+  - PDF generation (`PDR.pdf`, `TDR.pdf`, `USER_GUIDE.pdf`), student walkthroughs.

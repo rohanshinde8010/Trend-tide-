@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-violet: #9D00FF;
+  --color-red: #FE1D01;
+  --color-green: #62FF00;
+  --color-cyan: #00E1FF;
+
+  --bg-app: #EAEFF4;
+  --bg-card: #F4F7FA;
+  --bg-card-hover: #EEF3F8;
+  --bg-sidebar: #EBF0F5;
+  --bg-header: rgba(235, 240, 245, 0.95);
+  --bg-input: #E2E7EE;
+  --border-subtle: #CBD5E1;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #EAEFF4;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(157, 0, 255, 0.05) 0px, transparent 40%),
+      radial-gradient(at 100% 0%, rgba(0, 225, 255, 0.05) 0px, transparent 40%),
+      radial-gradient(at 50% 100%, rgba(98, 255, 0, 0.03) 0px, transparent 45%);
+    background-attachment: fixed;
+    color: #0F172A;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    overscroll-behavior: none;
+  }
+
+  ::selection {
+    background-color: rgba(157, 0, 255, 0.18);
+    color: #0F172A;
+  }
+}
+
+/* Ambient Executive Grayish Web Background */
+.executive-bg {
+  background-color: #EAEFF4;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(157, 0, 255, 0.055) 0px, transparent 40%),
+    radial-gradient(at 100% 0%, rgba(0, 225, 255, 0.055) 0px, transparent 40%),
+    radial-gradient(at 50% 100%, rgba(98, 255, 0, 0.035) 0px, transparent 45%);
+  background-attachment: fixed;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4-Color Gemstone Wave Bar (Violet -> Red -> Lime -> Cyan) - Exact Palette Segments */
+.gemstone-bar {
+  background: linear-gradient(90deg, #9D00FF 0% 25%, #FE1D01 25% 50%, #62FF00 50% 75%, #00E1FF 75% 100%);
+}
+
+.gemstone-smooth {
+  background: linear-gradient(90deg, #9D00FF 0%, #FE1D01 33%, #62FF00 66%, #00E1FF 100%);
+}
+
+.gemstone-gradient-border {
+  position: relative;
+  background: linear-gradient(#F4F7FA, #F4F7FA) padding-box,
+              linear-gradient(135deg, #9D00FF, #FE1D01, #62FF00, #00E1FF) border-box;
+  border: 1px solid transparent;
+}
+
+/* Executive Grayish Slate Glass Panels */
+.glass-panel {
+  background: rgba(244, 247, 250, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #CBD5E1;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+}
+
+.glass-card {
+  background: #F4F7FA;
+  border: 1px solid #CBD5E1;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: #EEF3F8;
+  border-color: #94A3B8;
+  box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+/* Executive Grayish Theme Overrides:
+   Ensure any bg-white cards render as the soothing, premium grayish surface #F4F7FA
+   instead of blinding, vibrant stark pure white */
+.bg-white {
+  background-color: #F4F7FA !important;
+}
+
+/* For elements explicitly needing pure white if needed */
+.bg-pure-white {
+  background-color: #FFFFFF !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Refined Grayish Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #E2E7EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
